@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Fruktur&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    overflow-y: hidden;
+    background-image: url("./assets/bg.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+/* <<<<<<< Scrolling Effect and Glowing Effect >>>>>>> */
+
+.sec {
+    position: relative;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 40px 0;
+}
+
+.sec h1 {
+    font-size: 5em;
+    color: #e07400;
+    font-family: 'Fruktur', cursive;
+    font-weight: 100;
+    text-align: center;
+    text-shadow: 0 0 40px #e07400;
+}
+
+/* <<<<<<< Instructions Part >>>>>>>> */
+
+.content {
+    position: relative;
+    width: 700px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 40px 30px;
+}
+
+@keyframes glassBox {
+    0%,100%
+    {
+        transform: translateY(10px);
+    }
+    50%
+    {
+        transform: translateY(-10px);
+    }
+}
+
+.inst {
+    position: relative;
+    left: 0;
+    padding: 20px 40px;
+    background: rgba(62, 62, 62, 0.596);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    transition: 0.5s;
+    color: #ffff;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+.content h3 {
+    text-decoration: underline;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.content li {
+    list-style: none;
+    font-size: 1.2em;
+    margin-top: 40px;
+}
+
+.content ul {
+    margin-bottom: 40px;
+}
+
+#login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
+#login p {
+    font-size: 1.25em;
+    position: relative;
+    display: inline-block;
+    padding: 10px 15px;
+    border: 2px solid #e07400;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+
+@media screen and (max-width: 530px) {
+    #bg,#castle,#img,#bats,#wolf{
+        display: none;
+    }
+    body{
+        background: linear-gradient(45deg,#e07400,#000);
+    }
+    .sec{
+        padding: 0;
+    }
+    .sec h1{
+        font-size: 2.5em;
+        margin-left: -18px;
+        margin-bottom: 40px;
+    }
+    .content{
+        width: 80%;
+        height: 60vh;
+        margin-left: 0px;
+    }
+    .halo {
+        height: 10vh;
+    }
+    .halo h1 {
+        font-size: 1.8em;
+        margin-left: 3px;
+        margin-top: 40px;
+        height: 100%;
+        width: 100%;
+    }
+    .halo::before{
+        background: none;
+    }
+}

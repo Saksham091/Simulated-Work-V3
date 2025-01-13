@@ -1,0 +1,79 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-y: hidden;
+    background-image: url("./assets/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.banner {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scores {
+    color: #e06500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.scores span {
+    font-size: 5em;
+    line-height: 70px;
+    text-shadow: 0 0 10px #e06500,
+    0 0 50px #e06500;
+}
+
+@keyframes animateText {
+    0%,100%
+    {
+        transform: translateY(-20px);
+    }
+    50%
+    {
+        transform: translateY(20px);
+    }
+}
+
+#play-again {
+    color: #e06500;
+    margin-top: 5%;
+    width: 100px;
+    height: 50px;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(255, 136, 0, 0.8),
+    0 0 50px rgba(255, 136, 0, 0.8);
+    cursor: pointer;
+}
+
+#play-again p {
+    position: relative;
+    top: 15px;
+    left: 7px;
+    font-size: 1.1em;
+    text-shadow: none;
+}
+
+@media screen and (max-width: 530px){
+    .scores span {
+        font-size: 2.5em;
+        line-height: 25px;
+    }
+    #play-again p {
+        font-size: 1em;
+        top: 13px;
+        left: 10px;
+    }
+}
